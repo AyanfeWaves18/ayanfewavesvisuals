@@ -4,6 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Google Fonts loaded in __root.tsx head */
+@theme inline {
+  --font-heading: "Instrument Serif", serif;
+  --font-body: "Work Sans", sans-serif;
+
 /*
  * Design system definition.
  *
