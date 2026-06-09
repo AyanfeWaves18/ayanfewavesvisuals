@@ -4,7 +4,6 @@ import photo3 from "@/assets/photo-3.jpg";
 import photo4 from "@/assets/photo-4.jpg";
 import photo5 from "@/assets/photo-5.jpg";
 import photo6 from "@/assets/photo-6.jpg";
-import photo7 from "@/assets/photo-7.jpg";
 import photo8 from "@/assets/photo-8.jpg";
 
 export interface Photo {
@@ -29,7 +28,7 @@ export const photos: Photo[] = [
   },
   {
     src: photo3,
-    alt: "Vibrant African market scene",
+    alt: "Vibrant Nigerian market scene",
     title: "Market Stories",
     category: "Documentary",
   },
@@ -50,12 +49,6 @@ export const photos: Photo[] = [
     alt: "Macro photography of rain droplets on leaves",
     title: "After the Rain",
     category: "Nature",
-  },
-  {
-    src: photo7,
-    alt: "Wedding couple dancing under string lights",
-    title: "First Dance",
-    category: "Wedding",
   },
   {
     src: photo8,

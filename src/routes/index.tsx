@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Ayanfe Waves Visuals — Photography" },
-      { name: "description", content: "Capturing moments that move the soul. Ayanfe Waves Visuals is a freelance photography studio specializing in portraits, landscapes, weddings, and editorial work." },
+      { name: "description", content: "Capturing moments that move the soul. Ayanfe Waves Visuals is a freelance photography studio specializing in portraits, landscapes, and editorial work." },
       { property: "og:title", content: "Ayanfe Waves Visuals — Photography" },
       { property: "og:description", content: "Capturing moments that move the soul." },
     ],
@@ -102,7 +102,7 @@ function Index() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { title: "Portraits", desc: "Intimate, soulful portraits that reveal the person within." },
-              { title: "Weddings", desc: "Timeless documentation of your most meaningful day." },
+              { title: "Events", desc: "Timeless documentation of your most meaningful moments." },
               { title: "Editorial", desc: "Fashion and commercial work with a cinematic eye." },
               { title: "Landscapes", desc: "The world at its most dramatic and beautiful moments." },
             ].map((service) => (

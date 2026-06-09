@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -26,40 +26,40 @@ function AboutPage() {
           </h1>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Photography found me during a quiet evening on the coast of Lagos, where the light
-              seemed to hold every emotion I had ever felt. Since then, the camera has been my
-              passport to the world — and my way of giving others a window into theirs.
+              Photography found me during a quiet evening in Nigeria, where the light seemed to
+              hold every emotion I had ever felt. Since then, the camera has been my way of
+              giving others a window into the moments they hold dear.
             </p>
             <p>
-              I specialize in portraits that feel like conversations, weddings that feel like
+              I specialize in portraits that feel like conversations, events that feel like
               poetry, and landscapes that remind us how small and precious we are. Every frame is
               shaped by a belief that the best images are not taken; they are felt.
             </p>
             <p>
-              Based between Lagos and London, I travel wherever stories call. My work has been
-              featured in editorial campaigns, gallery exhibitions, and the personal albums of
-              people who trusted me with their most important moments.
+              Based in Nigeria, I travel wherever stories call. My work captures portraits,
+              editorial moments, and the personal milestones of people who trust me with their
+              most important moments.
             </p>
           </div>
           <div className="mt-8 grid grid-cols-3 gap-6">
             <div>
-              <p className="font-heading text-3xl text-[#4f46e5]">8+</p>
+              <p className="font-heading text-3xl text-[#4f46e5]">2+</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Years</p>
             </div>
             <div>
-              <p className="font-heading text-3xl text-[#4f46e5]">200+</p>
+              <p className="font-heading text-3xl text-[#4f46e5]">100+</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Projects</p>
             </div>
             <div>
-              <p className="font-heading text-3xl text-[#4f46e5]">15</p>
-              <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Countries</p>
+              <p className="font-heading text-3xl text-[#4f46e5]">1</p>
+              <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Country</p>
             </div>
           </div>
         </div>
         <div className="relative">
           <div className="aspect-[3/4] overflow-hidden rounded-lg bg-[#141432]">
             <img
-              src={aboutPortrait}
+              src={aboutPortraitAsset.url}
               alt="Portrait of Ayanfe Waves Visuals"
               className="h-full w-full object-cover"
             />
