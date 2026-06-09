@@ -134,7 +134,7 @@ function ContactPage() {
                   className="mt-2 block w-full rounded-md border border-[rgba(255,255,255,0.12)] bg-[#0a0a1a] px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-[#4f46e5] focus:ring-1 focus:ring-[#4f46e5]"
                 >
                   <option>Portrait Session</option>
-                  <option>Wedding / Event</option>
+                  <option>Event</option>
                   <option>Editorial / Commercial</option>
                   <option>Landscape / Travel</option>
                   <option>Other</option>
@@ -153,11 +153,15 @@ function ContactPage() {
                   placeholder="Tell me about your project..."
                 />
               </div>
+              {error && (
+                <p className="text-sm text-red-400">{error}</p>
+              )}
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#4f46e5] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#4338ca]"
+                disabled={submitting}
+                className="w-full rounded-md bg-[#4f46e5] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#4338ca] disabled:opacity-60"
               >
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}

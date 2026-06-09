@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,8 +15,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[rgba(255,255,255,0.08)] bg-[#0a0a1a]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="font-heading text-xl tracking-tight text-foreground">
-          Ayanfe Waves Visuals
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logoAsset.url} alt="Ayanfe Waves Visuals logo" className="h-10 w-10 object-contain" />
+          <span className="font-heading text-xl tracking-tight text-foreground">Ayanfe Waves Visuals</span>
         </Link>
 
         {/* Desktop nav */}
