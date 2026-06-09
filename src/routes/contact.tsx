@@ -15,10 +15,32 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+    try {
+      const form = e.currentTarget;
+      const data = new FormData(form);
+      const res = await fetch("https://formspree.io/f/xjgdrzbw", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        setError("Something went wrong. Please try again or email directly.");
+      }
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -42,17 +64,17 @@ function ContactPage() {
                 Email
               </p>
               <a
-                href="mailto:hello@ayanfewavesvisuals.com"
+                href="mailto:ayanfewavesvisuals@gmail.com"
                 className="mt-1 block text-foreground transition-colors hover:text-[#4f46e5]"
               >
-                hello@ayanfewavesvisuals.com
+                ayanfewavesvisuals@gmail.com
               </a>
             </div>
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Based In
               </p>
-              <p className="mt-1 text-foreground">Lagos, Nigeria & London, UK</p>
+              <p className="mt-1 text-foreground">Nigeria</p>
             </div>
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
