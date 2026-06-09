@@ -15,7 +15,7 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
-const categories = ["All", "Portrait", "Landscape", "Documentary", "Architecture", "Fashion", "Nature", "Wedding", "Urban"];
+const categories = ["All", "Portrait", "Landscape", "Documentary", "Architecture", "Fashion", "Nature", "Urban"];
 
 function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All");
