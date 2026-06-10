@@ -5,6 +5,9 @@ import photo4 from "@/assets/photo-4.jpg";
 import photo5 from "@/assets/photo-5.jpg";
 import photo6 from "@/assets/photo-6.jpg";
 import photo8 from "@/assets/photo-8.jpg";
+import ayanfeSunset from "@/assets/ayanfe-sunset.png.asset.json";
+import ayanfePortraitBack from "@/assets/ayanfe-portrait-back.png.asset.json";
+import ayanfePortraitSmile from "@/assets/ayanfe-portrait-smile.png.asset.json";
 
 export interface Photo {
   src: string;
