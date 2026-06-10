@@ -83,9 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Ayanfe Waves Visuals — Capturing moments that move the soul." },
       { name: "author", content: "Ayanfe Waves Visuals" },
       { property: "og:title", content: "Ayanfe Waves Visuals — Photography" },
-      { property: "og:description", content: "Capturing moments that move the soul." },
+      { property: "og:description", content: "Ayanfe Waves Visuals — Capturing moments that move the soul." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ayanfe Waves Visuals — Photography" },
+      { name: "twitter:description", content: "Ayanfe Waves Visuals — Capturing moments that move the soul." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/25cd089f-034b-4728-81fc-fc0639a7f925/id-preview-fff59898--ad0c07a0-f437-4886-9ea1-254ae963399a.lovable.app-1781023979190.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/25cd089f-034b-4728-81fc-fc0639a7f925/id-preview-fff59898--ad0c07a0-f437-4886-9ea1-254ae963399a.lovable.app-1781023979190.png" },
     ],
     links: [
       {
