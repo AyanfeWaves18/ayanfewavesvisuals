@@ -5,6 +5,9 @@ import photo4 from "@/assets/photo-4.jpg";
 import photo5 from "@/assets/photo-5.jpg";
 import photo6 from "@/assets/photo-6.jpg";
 import photo8 from "@/assets/photo-8.jpg";
+import ayanfeSunset from "@/assets/ayanfe-sunset.png.asset.json";
+import ayanfePortraitBack from "@/assets/ayanfe-portrait-back.png.asset.json";
+import ayanfePortraitSmile from "@/assets/ayanfe-portrait-smile.png.asset.json";
 
 export interface Photo {
   src: string;
@@ -14,6 +17,24 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
+  {
+    src: ayanfePortraitSmile.url,
+    alt: "Smiling portrait in denim shirt — Ayanfe Visuals",
+    title: "Joy in Denim",
+    category: "Portrait",
+  },
+  {
+    src: ayanfePortraitBack.url,
+    alt: "Portrait from behind in black dress with white collar and cap",
+    title: "Quiet Silhouette",
+    category: "Portrait",
+  },
+  {
+    src: ayanfeSunset.url,
+    alt: "Sunset on a tree-lined road under a blue and gold sky",
+    title: "Evening Avenue",
+    category: "Landscape",
+  },
   {
     src: photo1,
     alt: "Portrait of a woman in golden hour light",
