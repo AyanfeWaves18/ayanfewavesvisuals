@@ -20,6 +20,18 @@ export interface Photo {
 
 export const photos: Photo[] = [
   {
+    src: ayanfeLavenderDress.url,
+    title: "Lavender Poise",
+    alt: "Portrait of a woman in a flowing lavender dress on a green lawn",
+    category: "Portrait",
+  },
+  {
+    src: ayanfeWhiteShirt.url,
+    title: "White Shirt Story",
+    alt: "Portrait of a man in a white shirt and patterned trousers outdoors",
+    category: "Portrait",
+  },
+  {
     src: ayanfePortraitSmile.url,
     alt: "Smiling portrait in denim shirt — Ayanfe Visuals",
     title: "Joy in Denim",
