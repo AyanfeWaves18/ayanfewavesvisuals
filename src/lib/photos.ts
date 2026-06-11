@@ -10,6 +10,7 @@ import ayanfePortraitBack from "@/assets/ayanfe-portrait-back.png.asset.json";
 import ayanfePortraitSmile from "@/assets/ayanfe-portrait-smile.png.asset.json";
 import ayanfeWhiteShirt from "@/assets/ayanfe-white-shirt.png.asset.json";
 import ayanfeLavenderDress from "@/assets/ayanfe-lavender-dress.png.asset.json";
+import ayanfeDuskAvenue from "@/assets/ayanfe-dusk-avenue.png.asset.json";
 
 export interface Photo {
   src: string;
