@@ -21,6 +21,12 @@ export interface Photo {
 
 export const photos: Photo[] = [
   {
+    src: ayanfeDuskAvenue.url,
+    alt: "Tree-lined avenue silhouetted against a dusk sky with street lamp",
+    title: "Dusk Avenue",
+    category: "Nature",
+  },
+  {
     src: ayanfeLavenderDress.url,
     title: "Lavender Poise",
     alt: "Portrait of a woman in a flowing lavender dress on a green lawn",
