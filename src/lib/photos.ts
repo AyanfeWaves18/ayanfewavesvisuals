@@ -11,6 +11,9 @@ import ayanfePortraitSmile from "@/assets/ayanfe-portrait-smile.png.asset.json";
 import ayanfeWhiteShirt from "@/assets/ayanfe-white-shirt.png.asset.json";
 import ayanfeLavenderDress from "@/assets/ayanfe-lavender-dress.png.asset.json";
 import ayanfeDuskAvenue from "@/assets/ayanfe-dusk-avenue.png.asset.json";
+import ayanfeStormField from "@/assets/ayanfe-storm-field.jpg.asset.json";
+
+
 
 export interface Photo {
   src: string;
@@ -20,6 +23,12 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
+  {
+    src: ayanfeStormField.url,
+    alt: "Dramatic storm clouds rolling over a green open field with trees",
+    title: "Gathering Storm",
+    category: "Nature",
+  },
   {
     src: ayanfeDuskAvenue.url,
     alt: "Tree-lined avenue silhouetted against a dusk sky with street lamp",
