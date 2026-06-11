@@ -8,6 +8,8 @@ import photo8 from "@/assets/photo-8.jpg";
 import ayanfeSunset from "@/assets/ayanfe-sunset.png.asset.json";
 import ayanfePortraitBack from "@/assets/ayanfe-portrait-back.png.asset.json";
 import ayanfePortraitSmile from "@/assets/ayanfe-portrait-smile.png.asset.json";
+import ayanfeWhiteShirt from "@/assets/ayanfe-white-shirt.png.asset.json";
+import ayanfeLavenderDress from "@/assets/ayanfe-lavender-dress.png.asset.json";
 
 export interface Photo {
   src: string;
@@ -17,6 +19,18 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
+  {
+    src: ayanfeLavenderDress.url,
+    title: "Lavender Poise",
+    alt: "Portrait of a woman in a flowing lavender dress on a green lawn",
+    category: "Portrait",
+  },
+  {
+    src: ayanfeWhiteShirt.url,
+    title: "White Shirt Story",
+    alt: "Portrait of a man in a white shirt and patterned trousers outdoors",
+    category: "Portrait",
+  },
   {
     src: ayanfePortraitSmile.url,
     alt: "Smiling portrait in denim shirt — Ayanfe Visuals",
