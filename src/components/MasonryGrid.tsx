@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 interface Photo {
   src: string;
   alt: string;
@@ -9,13 +11,24 @@ interface MasonryGridProps {
   photos: Photo[];
 }
 
+function filenameFor(photo: Photo) {
+  const slug = photo.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const ext = (photo.src.split(".").pop() || "jpg").split("?")[0];
+  return `${slug || "ayanfe-waves"}.${ext}`;
+}
+
 export function MasonryGrid({ photos }: MasonryGridProps) {
   return (
     <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
       {photos.map((photo, i) => (
-        <div
+        <a
           key={i}
-          className="group relative mb-4 break-inside-avoid overflow-hidden rounded-lg bg-[#141432]"
+          href={photo.src}
+          download={filenameFor(photo)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View or download ${photo.title}`}
+          className="group relative mb-4 block break-inside-avoid overflow-hidden rounded-lg bg-[#141432] focus:outline-none focus:ring-2 focus:ring-primary"
         >
           <img
             src={photo.src}
@@ -24,6 +37,9 @@ export function MasonryGrid({ photos }: MasonryGridProps) {
             className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1a]/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="absolute right-3 top-3 rounded-full bg-[#0a0a1a]/70 p-2 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+            <Download className="h-4 w-4 text-primary" />
+          </div>
           <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <p className="text-xs font-medium uppercase tracking-wider text-[#818cf8]">
               {photo.category}
@@ -32,7 +48,7 @@ export function MasonryGrid({ photos }: MasonryGridProps) {
               {photo.title}
             </p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );

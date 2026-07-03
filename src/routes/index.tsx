@@ -15,7 +15,10 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const featuredPhotos = photos.slice(0, 6);
+const featuredTitles = ["Shrouded Gaze", "Gathering Storm", "Lavender Poise", "Dusk Avenue"];
+const featuredPhotos = featuredTitles
+  .map((t) => photos.find((p) => p.title === t))
+  .filter((p): p is (typeof photos)[number] => Boolean(p));
 
 function Index() {
   return (
