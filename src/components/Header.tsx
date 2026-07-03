@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import { X } from "lucide-react";
+
+const ACCENT = "#64ffda";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,53 +15,82 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[rgba(255,255,255,0.08)] bg-[#0a0a1a]/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full bg-[#0a0a1a]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Ayanfe Waves Visuals logo" className="h-10 w-10 object-contain" />
-          <span className="font-heading text-xl tracking-tight text-foreground">Ayanfe Waves Visuals</span>
+        <Link to="/" className="font-mono text-xl tracking-tight" onClick={() => setMobileOpen(false)}>
+          <span style={{ color: ACCENT }}>Ayanfe</span>
+          <span className="text-foreground">waves</span>
+          <span style={{ color: ACCENT }}>.</span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
+          {links.map((link, i) => (
             <Link
               key={link.to}
               to={link.to}
-              activeProps={{ className: "text-[#4f46e5]" }}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ style: { color: ACCENT } }}
+              activeOptions={{ exact: link.to === "/" }}
             >
-              {link.label}
+              <span style={{ color: ACCENT }}>0{i + 1}.</span> {link.label}
             </Link>
           ))}
+          <a
+            href="#resume"
+            className="rounded border px-4 py-1.5 font-mono text-sm transition-colors hover:bg-[rgba(100,255,218,0.1)]"
+            style={{ color: ACCENT, borderColor: ACCENT }}
+          >
+            Resume
+          </a>
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile toggle */}
         <button
-          className="flex flex-col gap-1.5 md:hidden"
+          className="md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          style={{ color: mobileOpen ? ACCENT : undefined }}
         >
-          <span className="block h-px w-6 bg-foreground" />
-          <span className="block h-px w-6 bg-foreground" />
-          <span className="block h-px w-4 bg-foreground" />
+          {mobileOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <div className="flex flex-col items-end gap-1.5">
+              <span className="block h-px w-6 bg-foreground" />
+              <span className="block h-px w-6 bg-foreground" />
+              <span className="block h-px w-4 bg-foreground" />
+            </div>
+          )}
         </button>
       </div>
 
-      {/* Mobile nav */}
+      {/* Mobile nav card */}
       {mobileOpen && (
-        <div className="border-t border-[rgba(255,255,255,0.08)] bg-[#0a0a1a] px-6 pb-4 md:hidden">
-          <nav className="flex flex-col gap-4 pt-4">
-            {links.map((link) => (
+        <div className="px-4 pb-4 md:hidden">
+          <nav
+            className="flex flex-col gap-4 rounded-md border p-6"
+            style={{ borderColor: "rgba(100,255,218,0.25)", background: "rgba(10,10,26,0.95)" }}
+          >
+            {links.map((link, i) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="font-mono text-base text-foreground transition-colors"
+                activeProps={{ style: { color: ACCENT } }}
+                activeOptions={{ exact: link.to === "/" }}
               >
-                {link.label}
+                <span style={{ color: ACCENT }}>0{i + 1}.</span> {link.label}
               </Link>
             ))}
+            <a
+              href="#resume"
+              onClick={() => setMobileOpen(false)}
+              className="mt-2 self-start rounded border px-4 py-1.5 font-mono text-sm transition-colors hover:bg-[rgba(100,255,218,0.1)]"
+              style={{ color: ACCENT, borderColor: ACCENT }}
+            >
+              Resume
+            </a>
           </nav>
         </div>
       )}
