@@ -12,6 +12,8 @@ import ayanfeWhiteShirt from "@/assets/ayanfe-white-shirt.png.asset.json";
 import ayanfeLavenderDress from "@/assets/ayanfe-lavender-dress.png.asset.json";
 import ayanfeDuskAvenue from "@/assets/ayanfe-dusk-avenue.png.asset.json";
 import ayanfeStormField from "@/assets/ayanfe-storm-field.jpg.asset.json";
+import ayanfeHoodedPortrait from "@/assets/ayanfe-hooded-portrait.png.asset.json";
+import ayanfeMirrorSelfie from "@/assets/ayanfe-mirror-selfie.png.asset.json";
 
 
 
@@ -23,6 +25,18 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
+  {
+    src: ayanfeHoodedPortrait.url,
+    alt: "Moody black-and-white close-up portrait of a hooded figure",
+    title: "Shrouded Gaze",
+    category: "Portrait",
+  },
+  {
+    src: ayanfeMirrorSelfie.url,
+    alt: "Warm-toned mirror self-portrait in a white tee against a golden wall",
+    title: "Golden Room",
+    category: "Portrait",
+  },
   {
     src: ayanfeStormField.url,
     alt: "Dramatic storm clouds rolling over a green open field with trees",
