@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Mail, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -61,13 +62,42 @@ function ContactPage() {
           <div className="mt-10 space-y-6">
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Phone
+              </p>
+              <a
+                href="tel:+2348167829017"
+                className="mt-1 flex items-center gap-2 text-foreground transition-colors hover:text-[#4f46e5]"
+              >
+                <Phone className="h-4 w-4" />
+                +234 816 782 9017
+              </a>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Email
               </p>
               <a
                 href="mailto:ayanfewavesvisuals@gmail.com"
-                className="mt-1 block text-foreground transition-colors hover:text-[#4f46e5]"
+                className="mt-1 flex items-center gap-2 text-foreground transition-colors hover:text-[#4f46e5]"
               >
+                <Mail className="h-4 w-4" />
                 ayanfewavesvisuals@gmail.com
+              </a>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                TikTok
+              </p>
+              <a
+                href="https://www.tiktok.com/@ayanfewaves_visuals1?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 flex items-center gap-2 text-foreground transition-colors hover:text-[#4f46e5]"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.3 0 .59.05.86.13V8.31a6.36 6.36 0 0 0-.86-.06A6.25 6.25 0 0 0 3 14.5a6.25 6.25 0 0 0 6.25 6.25 6.25 6.25 0 0 0 6.25-6.25V8.82a8.1 8.1 0 0 0 4.77 1.52v-3.4a4.86 4.86 0 0 1-1-.1z" />
+                </svg>
+                @ayanfewaves_visuals1
               </a>
             </div>
             <div>

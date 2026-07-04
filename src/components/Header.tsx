@@ -8,8 +8,8 @@ export function Header() {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/portfolio", label: "Portfolio" },
     { to: "/about", label: "About" },
+    { to: "/portfolio", label: "Portfolio" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -26,13 +26,12 @@ export function Header() {
             <span className="text-primary">Ayanfe</span>
             <span className="text-foreground"> Waves </span>
             <span className="text-foreground">Visuals</span>
-            <span className="text-primary">.</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link, i) => (
+          {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
@@ -40,7 +39,7 @@ export function Header() {
               activeProps={{ className: "font-mono text-sm text-primary" }}
               activeOptions={{ exact: link.to === "/" }}
             >
-              <span className="text-primary">0{i + 1}.</span> {link.label}
+              {link.label}
             </Link>
           ))}
         </nav>
@@ -67,7 +66,7 @@ export function Header() {
       {mobileOpen && (
         <div className="px-4 pb-4 md:hidden">
           <nav className="flex flex-col gap-4 rounded-md border border-primary/30 bg-[#0a0a1a]/95 p-6">
-            {links.map((link, i) => (
+            {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -76,7 +75,7 @@ export function Header() {
                 activeProps={{ className: "font-mono text-base text-primary" }}
                 activeOptions={{ exact: link.to === "/" }}
               >
-                <span className="text-primary">0{i + 1}.</span> {link.label}
+                {link.label}
               </Link>
             ))}
           </nav>
