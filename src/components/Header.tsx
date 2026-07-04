@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
+import logo from "@/assets/logo.png.asset.json";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
