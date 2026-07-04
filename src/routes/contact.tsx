@@ -93,7 +93,7 @@ function ContactPage() {
               </div>
               <h3 className="font-heading text-xl text-foreground">Message Sent</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Thank you for reaching out. I&apos;ll be in touch within 48 hours.
+                Thank you for reaching out. I&apos;ll be in touch within 24 hours.
               </p>
             </div>
           ) : (
