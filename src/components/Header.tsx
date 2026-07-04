@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
+import logo from "@/assets/logo.png.asset.json";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,12 +18,16 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link
           to="/"
-          className="font-mono text-xl tracking-tight"
+          className="flex items-center gap-2 font-mono text-lg tracking-tight sm:text-xl"
           onClick={() => setMobileOpen(false)}
         >
-          <span className="text-primary">Ayanfe</span>
-          <span className="text-foreground">waves</span>
-          <span className="text-primary">.</span>
+          <img src={logo.url} alt="Ayanfe Waves Visuals logo" className="h-8 w-8 rounded-full object-cover" />
+          <span>
+            <span className="text-primary">Ayanfe</span>
+            <span className="text-foreground"> Waves </span>
+            <span className="text-foreground">Visuals</span>
+            <span className="text-primary">.</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
