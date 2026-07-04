@@ -1,3 +1,4 @@
+import { Mail, Phone } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 
 export function Footer() {
