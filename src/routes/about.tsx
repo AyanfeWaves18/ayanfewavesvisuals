@@ -41,18 +41,14 @@ function AboutPage() {
               most important moments.
             </p>
           </div>
-          <div className="mt-8 grid grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-2 gap-6">
             <div>
-              <p className="font-heading text-3xl text-[#4f46e5]">2+</p>
+              <p className="font-heading text-3xl text-[#4f46e5]">1+</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Years</p>
             </div>
             <div>
               <p className="font-heading text-3xl text-[#4f46e5]">100+</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Projects</p>
-            </div>
-            <div>
-              <p className="font-heading text-3xl text-[#4f46e5]">1</p>
-              <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">Country</p>
             </div>
           </div>
         </div>
