@@ -1,0 +1,10 @@
+# Ayanfe Waves Visuals
+
+> Freelance photography studio based in Nigeria, capturing portraits, editorial, events, and landscapes that move the soul.
+
+## Pages
+
+- [Home](/): Introduction, featured selected works, and services offered.
+- [Portfolio](/portfolio): Full gallery of photography work across portraits, landscape, documentary, architecture, fashion, nature, and urban categories.
+- [About](/about): The story behind Ayanfe Waves Visuals and the creative vision.
+- [Contact](/contact): Get in touch — email, phone, WhatsApp, and TikTok.

@@ -8,6 +8,25 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Learn about Ayanfe Waves Visuals, the story behind the lens, and what drives the creative vision." },
       { property: "og:title", content: "About — Ayanfe Waves Visuals" },
       { property: "og:description", content: "Learn about Ayanfe Waves Visuals, the story behind the lens." },
+      { property: "og:url", content: "https://ayanfewavesvisuals.lovable.app/about" },
+    ],
+    links: [{ rel: "canonical", href: "https://ayanfewavesvisuals.lovable.app/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About — Ayanfe Waves Visuals",
+          url: "https://ayanfewavesvisuals.lovable.app/about",
+          mainEntity: {
+            "@type": "Person",
+            name: "Ayanfe Waves Visuals",
+            jobTitle: "Photographer",
+            address: { "@type": "PostalAddress", addressCountry: "NG" },
+          },
+        }),
+      },
     ],
   }),
   component: AboutPage,

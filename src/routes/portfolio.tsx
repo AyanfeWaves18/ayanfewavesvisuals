@@ -10,6 +10,20 @@ export const Route = createFileRoute("/portfolio")({
       { name: "description", content: "Browse the complete portfolio of Ayanfe Waves Visuals. Portraits, landscapes, weddings, editorial, and more." },
       { property: "og:title", content: "Portfolio — Ayanfe Waves Visuals" },
       { property: "og:description", content: "Browse the complete portfolio of Ayanfe Waves Visuals." },
+      { property: "og:url", content: "https://ayanfewavesvisuals.lovable.app/portfolio" },
+    ],
+    links: [{ rel: "canonical", href: "https://ayanfewavesvisuals.lovable.app/portfolio" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Portfolio — Ayanfe Waves Visuals",
+          url: "https://ayanfewavesvisuals.lovable.app/portfolio",
+          about: "Photography portfolio featuring portraits, landscapes, documentary, architecture, fashion, nature, and urban work.",
+        }),
+      },
     ],
   }),
   component: PortfolioPage,

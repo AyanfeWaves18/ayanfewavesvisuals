@@ -10,6 +10,25 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Capturing moments that move the soul. Ayanfe Waves Visuals is a freelance photography studio specializing in portraits, landscapes, and editorial work." },
       { property: "og:title", content: "Ayanfe Waves Visuals — Photography" },
       { property: "og:description", content: "Capturing moments that move the soul." },
+      { property: "og:url", content: "https://ayanfewavesvisuals.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://ayanfewavesvisuals.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Ayanfe Waves Visuals",
+          description: "Freelance photography studio specializing in portraits, editorial, events, and landscapes.",
+          image: "https://ayanfewavesvisuals.lovable.app/__l5e/assets-v1/1323b926-4778-4216-b553-ea9a2d5fcf7d/logo.png",
+          url: "https://ayanfewavesvisuals.lovable.app/",
+          areaServed: "Nigeria",
+          address: { "@type": "PostalAddress", addressCountry: "NG" },
+          telephone: "+2348167829017",
+          email: "ayanfewavesvisuals@gmail.com",
+        }),
+      },
     ],
   }),
   component: Index,
@@ -30,7 +49,9 @@ function Index() {
             src={heroImg}
             alt="Photographer at twilight"
             className="h-full w-full object-cover opacity-60"
+            fetchPriority="high"
           />
+
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/40 via-[#0a0a1a]/20 to-[#0a0a1a]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
