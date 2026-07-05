@@ -49,7 +49,9 @@ function Index() {
             src={heroImg}
             alt="Photographer at twilight"
             className="h-full w-full object-cover opacity-60"
+            fetchPriority="high"
           />
+
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/40 via-[#0a0a1a]/20 to-[#0a0a1a]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
