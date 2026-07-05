@@ -91,13 +91,16 @@ function ContactPage() {
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Phone
               </p>
-              <a
-                href="tel:+2348167829017"
-                className="mt-1 flex items-center gap-2 text-foreground transition-colors hover:text-[#4f46e5]"
-              >
-                <Phone className="h-4 w-4" />
-                +234 816 782 9017
-              </a>
+              <div className="mt-1 flex items-center gap-1">
+                <a
+                  href="tel:+2348167829017"
+                  className="flex items-center gap-2 text-foreground transition-colors hover:text-[#4f46e5]"
+                >
+                  <Phone className="h-4 w-4" />
+                  +234 816 782 9017
+                </a>
+                <CopyButton text="+234 816 782 9017" />
+              </div>
             </div>
             <div>
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
