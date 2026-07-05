@@ -1,5 +1,33 @@
-import { Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, Copy, Check } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
+
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  };
+  return (
+    <button
+      onClick={handleCopy}
+      className="inline-flex items-center justify-center rounded-md p-1 text-muted-foreground transition-colors hover:text-primary"
+      aria-label="Copy to clipboard"
+      type="button"
+    >
+      {copied ? (
+        <Check className="h-3.5 w-3.5 text-emerald-400" />
+      ) : (
+        <Copy className="h-3.5 w-3.5" />
+      )}
+    </button>
+  );
+}
 
 export function Footer() {
   return (
