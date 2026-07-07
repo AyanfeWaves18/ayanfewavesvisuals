@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Ayanfe Waves Visuals" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "google-site-verification", content: "uB6Kzam4aDqS4VWVujKQnEXg2qlWzudD2ZzduS98wOc" },
     ],
     links: [
       {
