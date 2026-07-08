@@ -60,7 +60,7 @@ export function Footer() {
               ayanfewavesvisuals@gmail.com
             </a>
             <a
-              href="https://wa.me/message/QJFLNZ6VPBP6C1"
+              href="https://wa.me/message/QJFLNZ6VPBP6C1?text=Hi%2C%20Ayanfe%20I%27d%20like%20to%20book%20a%20photography%20session."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
