@@ -41,7 +41,7 @@ function AboutPage() {
             The Photographer
           </p>
           <h1 className="mt-2 font-heading text-4xl text-foreground sm:text-5xl">
-            Ayanfe Waves Visuals
+            About Ayanfe Waves Visuals — The Story Behind the Lens
           </h1>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>

@@ -12,7 +12,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Capturing moments that move the soul." },
       { property: "og:url", content: "https://ayanfewavesvisuals.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://ayanfewavesvisuals.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://ayanfewavesvisuals.lovable.app/" },
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -49,7 +52,10 @@ function Index() {
             src={heroImg}
             alt="Photographer at twilight"
             className="h-full w-full object-cover opacity-60"
+            width={1920}
+            height={1280}
             fetchPriority="high"
+            decoding="async"
           />
 
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1a]/40 via-[#0a0a1a]/20 to-[#0a0a1a]" />
