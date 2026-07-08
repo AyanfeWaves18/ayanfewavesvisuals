@@ -1,7 +1,7 @@
 export function WhatsAppCTA() {
   return (
     <a
-      href="https://wa.me/2348167829017?text=Hi%20Ayanfe%2C%20I%27d%20like%20to%20book%20a%20photography%20session."
+      href="https://wa.me/message/QJFLNZ6VPBP6C1"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Ayanfe Waves Visuals on WhatsApp"
