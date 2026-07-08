@@ -60,7 +60,7 @@ export function Footer() {
               ayanfewavesvisuals@gmail.com
             </a>
             <a
-              href="https://wa.me/2348167829017"
+              href="https://wa.me/message/QJFLNZ6VPBP6C1"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
